@@ -7,17 +7,21 @@ using namespace std;
 
 Cola::Cola() 
 {
-    tope = -1;
+    frente = fondo = -1;
 }
 
 int Cola::Cardinalidad()
 {
-    return tope + 1;
+    if(EsVacia())
+        return 0;
+    return (fondo - frente) + 1;
 }
 
 void Cola::Despliega()
 {
-    for(int i = 0; i <= tope; i++)
+    if(EsVacia())
+        return;
+    for(int i = frente; i <= fondo; i++)
         cout << cola[i] << "\n\n";
     cout << endl;
 }
@@ -26,31 +30,18 @@ bool Cola::Elimina(int *num)
 {
     if(EsVacia())
         return false;
-    *num = cola[0];
-    tope--;
-    
-    /*cola[0] = cola[1];
-    cola[1] = cola[2];
-    cola[2] = cola[3];
-    cola[3] = cola[4];
-    cola[4] = cola[5];
-    cola[5] = cola[6];
-    cola[6] = cola[7];
-    cola[7] = cola[8];
-    cola[8] = cola[9];
-    cola[9] = cola[0];
-    return true;*/
-
-    for(int l1 = 0 ; l1 <= 8 ; l1++)
-    for(int l2 = 1 ; l2 <= 9 ; l2++)
-        cola[l1] = cola[l2];
-        cola[9] = cola[0];
+    *num = cola[frente];
+    frente++;
+    if(frente > fondo)
+        frente = fondo = -1;
     return true;
 }
 
 bool Cola::EsElemento(int num)
 {
-    for(int i = 0; i <= tope; i++)
+    if(EsVacia())
+        return false;
+    for(int i = frente; i <= fondo; i++)
         if(cola[i] == num)
             return true;
     return false;
@@ -58,7 +49,7 @@ bool Cola::EsElemento(int num)
 
 bool Cola::EsLlena()
 {
-    if(tope == TAMCOLA - 1)
+    if(fondo == TAMCOLA - 1)
         return true;
     else
         return false;
@@ -66,7 +57,7 @@ bool Cola::EsLlena()
 
 bool Cola::EsVacia()
 {
-    if(tope == -1)
+    if(frente == -1)
         return true;
     else
         return false;
@@ -76,7 +67,9 @@ bool Cola::Inserta(int num)
 {
     if(EsLlena())
         return false;
-    tope++;
-    cola[tope] = num;
+    fondo++;
+    cola[fondo] = num;
+    if(fondo == 0)
+        frente = 0;
     return true;
 }

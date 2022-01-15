@@ -1,15 +1,15 @@
-#ifndef COLA_H
-#define COLA_H
+#ifndef PILA_H
+#define PILA_H
 
-#define TAMCOLA 10
+#define TAMPILA 10
 
-class Cola 
+class Pila 
 {
 private:
-    int cola[TAMCOLA];
+    int pila[TAMPILA];
     int tope;
 public:
-    Cola();
+    Pila();
     int  Cardinalidad();
     void Despliega();
     bool Elimina(int*);
@@ -19,4 +19,4 @@ public:
     bool Inserta(int);
 };
 
-#endif /* COLA_H */
+#endif /* PILA_H */

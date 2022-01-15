@@ -2,6 +2,12 @@
   "version": "0.2.0",
   "configurations": [
     {
+      "command": "npm start",
+      "name": "Run npm start",
+      "request": "launch",
+      "type": "node-terminal"
+    },
+    {
       "name": "C/C++ Runner: Debug Session",
       "type": "cppdbg",
       "request": "launch",
@@ -9,9 +15,9 @@
         ""
       ],
       "stopAtEntry": false,
-      "cwd": "c:/Users/AldoD/OneDrive/Documentos/ProyectosProgramacion/InterPoo",
+      "cwd": "c:/Users/AldoD/OneDrive/Documentos/ProyectosProgramacion/InterPoo/InterPoo/Fecha.cpp",
       "environment": [],
-      "program": "c:/Users/AldoD/OneDrive/Documentos/ProyectosProgramacion/InterPoo/build/Debug/outDebug",
+      "program": "c:/Users/AldoD/OneDrive/Documentos/ProyectosProgramacion/InterPoo/InterPoo/Fecha.cpp/build/Debug/outDebug",
       "internalConsoleOptions": "openOnSessionStart",
       "MIMode": "gdb",
       "miDebuggerPath": "C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/gdb.exe",
