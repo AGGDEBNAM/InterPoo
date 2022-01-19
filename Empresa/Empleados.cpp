@@ -19,16 +19,20 @@ Empleados::Empleados(int numEmp , string apPat , string apMat , string nomb , in
 
 void Empleados::Despliega()
 {
-    cout << "Nuestro empleado " << numEmp << " llamado " ;
+    for(int i = 0; i <= 100; i++)
+        cout << "~" ;
+    cout << "\nNuestro empleado " << numEmp << " llamado " ;
     cout << apPat;
     cout << apMat;
     cout << nomb;
-    cout << " Admitido en el anio : " << an << " con ingresos sin impuesto: " << endl; 
+    cout << " Admitido en el anio : " << an << " con ingresos sin impuesto: \n" << endl; 
 }
 
 void Empleados::DespliegaSueldo()
 {
-    cout << "El sueldo quincenal es de : ";
+    for(int i = 0; i <= 100; i++)
+        cout << "_" ;
+    cout << "\nEl sueldo quincenal es de : ";
     Sueldos::SueldoEmpleado();
     cout << " mil Pesos Mexicanos\n";
     Sueldos::IncrementoSueldo();
@@ -42,4 +46,6 @@ void Empleados::DespliegaSueldoAnual()
         cout << " mil Pesos Mexicanos" << endl;
     else
         cout << " millones Pesos Mexicanos" << endl;
+    for(int i = 0; i <= 100; i++)
+        cout << "~" ;
 }

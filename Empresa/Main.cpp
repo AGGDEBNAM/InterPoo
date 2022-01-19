@@ -1,5 +1,7 @@
 #include <cstdlib>
 #include <iostream>
+#include <string>
+#include <math.h>
 
 #include "Sueldos.cpp"
 #include "Sueldos.h"
