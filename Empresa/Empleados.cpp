@@ -1,51 +1,36 @@
 #include <cstdlib>
 #include <iostream>
-#include <math.h>
-#include <string>
-
 
 using namespace std;
 
-#include "Sueldos.h"
 #include "Empleados.h"
+#include "SueldoPorHoras.h"
 
-Empleados::Empleados(int numEmp , string apPat , string apMat , string nomb , int numSuel , int an , float suel):
-    Sueldos(numEmp,numSuel,an,suel)
+Empleados::Empleados(int numEmp, string apPat, string apMat, 
+    string nomb, int numSuel, int an, float suel) : 
+    SueldoEmpleado(numSuel, numEmp, an, suel)
 {
-    apPat = apellidoPaterno;
-    apMat = apellidoMaterno;
-    nomb = nombre;
+    idEmpleados = numEmp;
+    apellidoPaterno = apPat;
+    apellidoMaterno = apMat;
+    nombre = nomb;
 }
 
 void Empleados::Despliega()
 {
-    for(int i = 0; i <= 100; i++)
-        cout << "~" ;
-    cout << "\nNuestro empleado " << numEmp << " llamado " ;
-    cout << apPat;
-    cout << apMat;
-    cout << nomb;
-    cout << " Admitido en el anio : " << an << " con ingresos sin impuesto: \n" << endl; 
+    cout << "El empleado " << nombre << " " << apellidoPaterno
+        << " " << apellidoMaterno << " tiene el código " << idEmpleados 
+        << endl;
 }
 
 void Empleados::DespliegaSueldo()
 {
-    for(int i = 0; i <= 100; i++)
-        cout << "_" ;
-    cout << "\nEl sueldo quincenal es de : ";
-    Sueldos::SueldoEmpleado();
-    cout << " mil Pesos Mexicanos\n";
-    Sueldos::IncrementoSueldo();
+    cout << "Tiene el sueldo de " << SueldoEmpleado.SueldoEmpleado()
+        << " para el año " << SueldoEmpleado.get_anio() << ". Trabajando en planta : " <<  Horas.NumHoras() << " al dia \t Con un sueldo de" << Horas.TabuladorHoras() << " Por hora." << endl;
 }
 
 void Empleados::DespliegaSueldoAnual()
 {
-    cout << "El sueldo anual es de: ";
-    Sueldos::SueldoAnual();
-    if(suel * 24 <= 999999)
-        cout << " mil Pesos Mexicanos" << endl;
-    else
-        cout << " millones Pesos Mexicanos" << endl;
-    for(int i = 0; i <= 100; i++)
-        cout << "~" ;
+    cout << "Y un sueldo anual de " << 
+        SueldoEmpleado.SueldoEmpleadoAnual() << endl;
 }

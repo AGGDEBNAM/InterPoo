@@ -7,6 +7,8 @@
 #include "Sueldos.h"
 #include "Empleados.cpp"
 #include "Empleados.h"
+#include "EmpleadoPlanta.cpp"
+#include "EmpleadoPlanta.h"
 
 using namespace std;
 

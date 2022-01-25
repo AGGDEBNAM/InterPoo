@@ -1,10 +1,6 @@
 #ifndef SUELDOS_H
 #define SUELDOS_H
 
-#include <string>
-#include <cstdlib>
-#include <iostream>
-
 class Sueldos 
 {
 private:
@@ -12,17 +8,12 @@ private:
     int   idEmpleado;
     int   anio;
     float sueldo;
-protected:
-    int numSuel;
-    int numEmp;
-    int an;
-    float suel;
 public:
-    Sueldos(int idEmpelado = 0 , int idSueldo = 0 , int anio = 0 , float sueldo = 0.0); // constructor con valores predeterminados
-    void Despliega();
-    void IncrementoSueldo();   // regresa el nuevo idSueldo;
-    int SueldoEmpleado();
-    int SueldoAnual();
+    Sueldos(int = 0, int = 0, int = 0, float = 0.0); // constructor con valores predeterminados
+    int get_anio();
+    int IncrementoSueldo();   // regresa el nuevo idSueldo;
+    float SueldoEmpleado();
+    float SueldoEmpleadoAnual();
 };
 
 #endif /* SUELDOS_H */

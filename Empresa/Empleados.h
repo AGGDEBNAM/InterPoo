@@ -2,26 +2,25 @@
 #define EMPLEADOS_H
 
 #include <string>
-#include <cstdlib>
-#include <iostream>
 
 #include "Sueldos.h"
+#include "SueldoPorHoras.h"
 
 using namespace std;
 
-class Empleados : public Sueldos
+class Empleados
 {
-private:
-    //Sueldos SueldoEmpleado;
+protected:
+    Sueldos SueldoEmpleado;
+    SueldoPorHoras Horas;
+
+    int     idEmpleados;
     string  apellidoPaterno;
     string  apellidoMaterno;
     string  nombre;
-protected:
-    string nomb;
-    string apPat;
-    string apMat;
 public:
-    Empleados(int numEmp,string apPat,string apMat,string nomb,int numSuel,int an,float suel);
+    Empleados(int = 0, string = "", string = "", string = "", int = 0,
+        int = 0,float = 0.0); // constructor con valores predeterminados
     void Despliega();
     void DespliegaSueldo();
     void DespliegaSueldoAnual();

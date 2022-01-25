@@ -17,7 +17,7 @@ int l; // variable global
 int main(int argc, char** argv) 
 {
     //^ Punto
-    /*
+    
     Punto p1(2.56,3.92);
     Punto p2(-3.45,8.75);
     float dist = p1.Distancia(p2);
@@ -26,7 +26,7 @@ int main(int argc, char** argv)
     cout << " y ";
     p2.Despliega();
     cout << " es: " << dist << endl;
-    */
+    
     //^ Circulo
     /*
     Circulo c(2.5,10,3);
