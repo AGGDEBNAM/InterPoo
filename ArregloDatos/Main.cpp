@@ -2,11 +2,11 @@
 #include <iostream>
 
 #include "Pila.h"
-#include "Pila.cpp"
 #include "Cola.h"
-#include "Cola.cpp"
 #include "ColaCircular.h"
-#include "ColaCircular.cpp"
+#include "Pila.cpp"
+//#include "Cola.cpp"
+//#include "ColaCircular.cpp"
 
 using namespace std;
 

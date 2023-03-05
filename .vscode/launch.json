@@ -11,17 +11,13 @@
       "name": "C/C++ Runner: Debug Session",
       "type": "cppdbg",
       "request": "launch",
-      "args": [
-        ""
-      ],
+      "args": [],
       "stopAtEntry": false,
-      "cwd": "c:/Users/AldoD/OneDrive/Documentos/ProyectosProgramacion/InterPoo/InterPoo/Fecha.cpp",
-      "environment": [],
-      "program": "c:/Users/AldoD/OneDrive/Documentos/ProyectosProgramacion/InterPoo/InterPoo/Fecha.cpp/build/Debug/outDebug",
-      "internalConsoleOptions": "openOnSessionStart",
-      "MIMode": "gdb",
-      "miDebuggerPath": "C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/gdb.exe",
       "externalConsole": false,
+      "cwd": "/home/agg/Documentos/POO REPO/InterPoo/ArregloDatos",
+      "program": "/home/agg/Documentos/POO REPO/InterPoo/ArregloDatos/build/Debug/outDebug",
+      "MIMode": "gdb",
+      "miDebuggerPath": "gdb",
       "setupCommands": [
         {
           "description": "Enable pretty-printing for gdb",
